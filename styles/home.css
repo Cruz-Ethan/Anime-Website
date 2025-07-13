@@ -1,0 +1,32 @@
+.anime-grid {
+    background-color: var(--bg-normal);
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.anime-container {
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.anime-cover {
+    width: 100%;
+    aspect-ratio: 0.7;
+    object-fit: cover;
+    object-position: top;
+}
+
+.anime-container:hover {
+    background-color: var(--highlight);
+}
+
+.anime-title {
+    color: var(--text-normal);
+}

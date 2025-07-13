@@ -1,0 +1,69 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-normal);
+    grid-column: 1 / span 2;
+    padding: 5px 40px;
+    border-radius: 20px;
+}
+
+.hamburger-menu {
+    color: var(--text-normal);
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.hamburger-menu:hover {
+    color: var(--highlight);
+}
+
+.logo {
+    margin-right: 60px;
+}
+
+.logo a {
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.logo:hover a {
+    color: var(--highlight);
+}
+
+.search-bar-container {
+    position: relative;
+    flex: 1;
+}
+
+.search-bar {
+    margin-block: auto;
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    border: none;
+    font-size: 1rem;
+    padding: 20px 30px;
+    width: calc(100% - 60px);
+    border-radius: 50px;
+}
+
+.search-icon {
+    color: var(--text-muted);
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+@media(max-width: 600px) {
+    .search-bar-container {
+        display: none;
+    }
+}
+
+@media(max-width: 400px) {
+    header {
+        padding: 5px 20px;
+    }
+}

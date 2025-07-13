@@ -1,0 +1,114 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+}
+
+aside,
+main {
+    background-color: var(--bg-normal);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+aside {
+    grid-row: 2 / span 2;
+}
+
+.title-container {
+    display: flex;
+    gap: 20px;
+}
+
+.title-cover {
+    height: 300px;
+}
+
+.title {
+    color: var(--text-normal);
+    font-size: 1.5rem;
+}
+
+.alternative-titles {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.description-container-2 {
+    display: none;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+main {
+    height: auto;
+}
+
+.episode-list-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50px);
+    gap: 10px;
+}
+
+.episode-list-container button {
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    border: none;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    max-width: 80px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.15s;
+}
+
+.episode-list-container button:hover {
+    background-color: var(--bg-glow);
+}
+
+.episode-list-container .selected-episode {
+    background-color: var(--highlight);
+    color: var(--text-normal);
+    transition: opacity 0.15s;
+}
+
+.episode-list-container .selected-episode:hover {
+    background-color: var(--highlight);
+    opacity: 0.8;
+}
+
+.episode {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description-container-2 {
+        display: block;
+    }
+
+    .description-container {
+        display: none;
+    }
+}
+
+@media(max-width: 700px) {
+    .title-container {
+        flex-direction: column;
+    }
+
+    .title-cover {
+        width: 200px;
+    }
+}
