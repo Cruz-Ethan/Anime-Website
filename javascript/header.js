@@ -1,0 +1,15 @@
+const hamburgerMenuElement = document.querySelector('.hamburger-menu');
+const closeButtonElement = document.querySelector('.close-icon-container');
+const overlayElement = document.querySelector('.overlay');
+
+hamburgerMenuElement.addEventListener('click', showMenu);
+closeButtonElement.addEventListener('click', hideMenu);
+overlayElement.addEventListener('click', hideMenu);
+
+function showMenu() {
+    document.body.classList.add('show-menu');
+}
+
+function hideMenu() {
+    document.body.classList.remove('show-menu');
+}
