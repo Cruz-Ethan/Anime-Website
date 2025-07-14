@@ -1,18 +1,36 @@
 const animeGridElement = document.querySelector('.anime-grid');
-console.log(animeGridElement);
+let filterRule = localStorage.getItem('filter seasons');
+let filteredSeasonsArray = seasons;
 
-animeGridElement.innerHTML = seasons.reduce((animeGridHTML, season) => 
-    animeGridHTML + `
-    <a class="anime-container" href="episodes.html">
-        <img class="anime-cover" src="${season.path}/title-cover.jpg">
-        <h3 class="anime-title">${season.title}</h3>
-    </a>
-`, '');
+if(filterRule) {
+    switch(filterRule) {
+        case 'search bar':
+            filteredSeasonsArray = seasons.filter(season => season.alternativeTitles.toLowerCase().includes(localStorage.getItem('search value').toLowerCase()));
+            break;
+        case 'currently watching':
+            filteredSeasonsArray = seasons.filter(season => Object.hasOwn(localStorage, season.title));
+            break;
+    }
+}
 
-const animeArray = document.querySelectorAll('.anime-container');
-animeArray.forEach((containerElement, index) => {
-    containerElement.addEventListener('click', () => {
-        localStorage.setItem('currentlyWatching', index);
-        console.log(localStorage.getItem('currentlyWatching'));
-    })
-});
+renderAnimeGrid(filteredSeasonsArray);
+
+function renderAnimeGrid(seasonsArray) {
+    animeGridElement.innerHTML = seasonsArray.reduce((animeGridHTML, season) => 
+        animeGridHTML + `
+        <a class="anime-container" href="episodes.html">
+            <img class="anime-cover" src="${season.path}/title-cover.jpg">
+            <h3 class="anime-title">${season.title}</h3>
+        </a>
+    `, '');
+
+    const animeArray = document.querySelectorAll('.anime-container');
+    let index = 0;
+    for(let i = 0; i < seasonsArray.length; i++) {
+        animeArray[i].addEventListener('click', () => {
+            index = seasons.indexOf(seasonsArray[i], index);
+            localStorage.setItem('currentlyWatching', index);
+            console.log(localStorage.getItem('currentlyWatching'));
+        })
+    }
+}

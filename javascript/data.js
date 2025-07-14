@@ -47,5 +47,26 @@ const seasons = [
         description: "As the son of the late legendary actress Subaru Ayase, Yuu has had many expectations placed upon him after he transferred to Saika Academy, a highly prestigious school where students can hone their personal talents. However, in contrast to his mother, Yuu is completely talentless. Being seen as completely mediocre, he would have no chance of standing side by side with the three emperors of Saika Academy: the Mikadono sisters, Miwa, Nico, and Kazuki, who are each prodigies in shogi, martial arts, and performing arts, respectively. With Subaru's friend agreeing to take her son in, Yuu aims to fulfill his mother's last wish to him, which is to build a happy family, after never being able to form a proper mother-son relationship due to their difference in talent. As it turns out, his mother's friend is actually the father of the Mikadono sisters! Keeping his mother's wish in mind, Yuu aims to build familial bonds with the siblings. However, due to their extreme focus on their respective specializations, they show little interest in opening themselves up not only to him, but to each other as well. Nonetheless, Yuu strives to continuously support the three prodigies, as his kindness and care restores the bond between the sisters.",
         path: "shows/dealing with mikadono sisters is a breeze/season 1",
         numberOfEpisodes: 2
+    },
+    {
+        title: "Reborn as a Vending Machine, I Now Wander the Dungeon Season 2",
+        alternativeTitles: "Reborn as a Vending Machine, I Now Wander the Dungeon Season 2, Jidou Hanbaiki ni Umarekawatta Ore wa Meikyuu wo Samayou 2nd Season, I Was Reborn as a Vending Machine, Wandering in the Dungeon, I Reincarnated Into a Vending Machine, 自動販売機に生まれ変わった俺は迷宮を彷徨う2nd season",
+        description: "A man with a passion for vending machines awakens to realize that he has not only died, but he has also been reborn as one of his beloved machines! Although he is a modern appliance in a fantasy world, he requires money in order to keep functioning. He is stuck in one location until a young girl named Lammis stumbles upon him. Amazed by the drinks and food he sells, Lammis uses her \"Blessing of Might\" to lift him with ease and take him back to the village of Clearflow Lake. There, she officially dubs him Boxxo. Despite his inability to converse with the villagers, Boxxo becomes an essential part of the community. His goods provide nourishment, and, as he gains new abilities and products, he becomes a staple of daily life. Nobody is as loyal to Boxxo as his first and best customer, Lammis. The more time he spends with her, the more he tries to help her elevate her skills as a young hunter.",
+        path: "shows/reborn as a vending machine i now wander the dungeon/season 2",
+        numberOfEpisodes: 2
+    },
+    {
+        title: "Our Last Crusade or the Rise of a New World Season 2",
+        alternativeTitles: "Our Last Crusade or the Rise of a New World Season 2, Kimi to Boku no Saigo no Senjou, Aruiwa Sekai ga Hajimaru Seisen Season II, Our Last Crusade or the Rise of a New World 2nd Season, The Last Battlefield Between You and I, or Perhaps the Beginning of the World's Holy War 2nd Season, Kimisen, キミと僕の最後の戦場、あるいは世界が始まる聖戦 Season Ⅱ",
+        description: "Over a century ago, astral mages under persecution from the Empire banded together and established the Nebulis Sovereignty under three founding families: Lou, Hydra, and Zoa. With the leadership of Millavair Lou Nebulis VIII, the Sovereignty aims to minimize casualties in their conflict with the Empire—a stance the extremist Zoas disagree with. Tensions rise between the families as the upcoming election to decide the next leader approaches. The Zoas are willing to do anything to achieve success; however, a world-ending war may ensue should they be victorious. Princess Aliceliese \"Alice\" Lou Nebulis XI has no choice but to cooperate with any potential allies in order to advance towards her ultimate goal of ending the conflict that has long tormented everyone involved. This includes Iska—one of the Empire's greatest warriors and her greatest rival.",
+        path: "shows/our last crusade or the rise of a new world/season 2",
+        numberOfEpisodes: 12
+    },
+    {
+        title: "The Children of the Shiunji Family",
+        alternativeTitles: "The Children of Shiunji Family, Shiunji-ke no Kodomotachi, The Shiunji Family Children, The Shiunji Siblings, 紫雲寺家の子供たち",
+        description: "The love between brother and sister. The love between man and woman. That which is most forbidden is most unyielding. The two sons and five daughters of the Shiunji family shine like brilliant gems, each with intelligence and beauty in equal measure. And with the pedigree of their wealthy father behind them, how could they not be the talk of the town? Eldest son Arata has spent his life being tossed around by the whims of his colorful sisters, yet a little teasing won't stop him from valuing his family over anything and anyone else. But when his youngest sister turns fifteen, their father reveals a long-hidden secret of the Shiunji \"siblings\" and knocks Arata's world off its axis...",
+        path: "shows/the children of the shiunji family/season 1",
+        numberOfEpisodes: 12
     }
 ];

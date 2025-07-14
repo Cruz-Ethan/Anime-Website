@@ -47,6 +47,7 @@ header {
     padding: 20px 30px;
     width: calc(100% - 60px);
     border-radius: 50px;
+    outline: transparent;
 }
 
 .search-icon {
