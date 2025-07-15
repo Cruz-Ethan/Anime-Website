@@ -1,5 +1,16 @@
-let animeID = localStorage.getItem('currentlyWatching');
-const anime = seasons[animeID];
+const url = document.location.href;
+let endingIndex = url.length;
+endingIndex = url.lastIndexOf('/', endingIndex - 1);
+let startingIndex = url.lastIndexOf('/', endingIndex - 1);
+startingIndex = url.lastIndexOf('/', startingIndex - 1) + 1;
+const animePath = url.substring(startingIndex, endingIndex).replaceAll('%20', ' ');
+
+let anime;
+seasons.forEach((season) => {
+    if(season.path === animePath) {
+        anime = season;
+    }
+})
 
 document.title = anime.title;
 
@@ -13,7 +24,7 @@ const episodesArray = document.querySelectorAll('.episode-button');
 const videoElement = document.querySelector('.episode');
 
 episodesArray[currentEpisode - 1].classList.toggle('selected-episode');
-videoElement.src = `${anime.path}/episodes/episode-${currentEpisode}.mp4`;
+videoElement.src = `episodes/episode-${currentEpisode}.mp4`;
 
 episodesArray.forEach((episodeButtonElement, index) => {
     episodeButtonElement.addEventListener('click', () => {
@@ -22,15 +33,12 @@ episodesArray.forEach((episodeButtonElement, index) => {
 });
 
 function setEpisode(episodeIndex) {
-    videoElement.src = `${anime.path}/episodes/episode-${episodeIndex}.mp4`;
+    videoElement.src = `episodes/episode-${episodeIndex}.mp4`;
     episodesArray[currentEpisode - 1].classList.toggle('selected-episode');
     currentEpisode = episodeIndex;
     episodesArray[currentEpisode - 1].classList.toggle('selected-episode');
     localStorage.setItem(document.title, currentEpisode);
 }
-
-const titleCoverElement = document.querySelector('.title-cover');
-titleCoverElement.src = `${anime.path}/title-cover.jpg`;
 
 const titleElement = document.querySelector('.title');
 titleElement.innerHTML = anime.title;

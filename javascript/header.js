@@ -3,7 +3,6 @@ const closeButtonElement = document.querySelector('.close-icon-container');
 const overlayElement = document.querySelector('.overlay');
 const searchBarElement = document.querySelector('.search-bar');
 const homeLinkElement = document.querySelector('.home-link');
-const currentlyWatchingLinkElement = document.querySelector('.currently-watching-link');
 const logoElement = document.querySelector('.logo');
 
 hamburgerMenuElement.addEventListener('click', showMenu);
@@ -19,13 +18,9 @@ function hideMenu() {
 }
 
 homeLinkElement.addEventListener('click', () => {
-    localStorage.removeItem('filter seasons');
-});
-
-currentlyWatchingLinkElement.addEventListener('click', () => {
-    localStorage.setItem('filter seasons', 'currently watching');
+    localStorage.removeItem('search value');
 });
 
 logoElement.addEventListener('click', () => {
-    localStorage.removeItem('filter seasons');
+    localStorage.removeItem('search value');
 })
