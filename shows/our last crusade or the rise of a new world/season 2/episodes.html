@@ -8,13 +8,12 @@
         <link rel="stylesheet" href="../../../styles/episode.css">
         <link rel="stylesheet" href="../../../styles/general.css">
         <link rel="stylesheet" href="../../../styles/header.css">
-        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="icon" type="image/x-icon" href="../../../favicon.png">
 
         <script src="https://kit.fontawesome.com/25180c9a39.js" crossorigin="anonymous"></script>
-        <script src="../../../javascript/data.js"></script>
-        <script src="../../../javascript/episodes.js" defer></script>
-        <script src="../../../javascript/header.js" defer></script>
-        <script src="../../../javascript/search-bar-episodes.js" defer></script>
+        <script type="module" src="../../../javascript/scripts/episodes.js" defer></script>
+        <script src="../../../javascript/scripts/header.js" defer></script>
+        <script src="../../../javascript/scripts/search bar/search-bar-episodes.js" defer></script>
     </head>
     <body>
         <header>
@@ -34,7 +33,11 @@
         </nav>
         <div class="overlay"></div>
         <main>
-            <video class="episode" controls></video>
+            <div class="episode-container">
+                <video class="episode" controls autoplay></video>
+                <button class="skip-intro-button display-button">Skip Intro</button>
+                <button class="skip-outro-button">Skip Outro</button>
+            </div>
             <div class="episode-list-container"></div>
         </main>
         <aside>
