@@ -9,7 +9,8 @@ export const seasons = [
             startTimes: [
                 10000,
                 0,
-                39.44
+                39.44,
+                96.25
             ]
         },
         ending: {
@@ -17,7 +18,8 @@ export const seasons = [
             startTimes: [
                 10000,
                 1330.23,
-                1330.19
+                1330.19,
+                1330.22
             ]
         },
         id: 0
@@ -31,12 +33,14 @@ export const seasons = [
             lengthSeconds: 89.77,
             startTimes: [
                 7.07,
-                80.27
+                80.27,
+                0
             ]
         },
         ending: {
             lengthSeconds: 89.41,
             startTimes: [
+                1330.65,
                 1330.65,
                 1330.65
             ]

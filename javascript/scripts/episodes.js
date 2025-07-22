@@ -26,9 +26,8 @@ episodesArray.forEach((episodeButtonElement, index) => {
 // load video
 const videoElement = document.querySelector('.episode');
 videoElement.src = `episodes/episode-${currentEpisode}.mp4`;
-
-// add skip buttons and autoplay to next episode
-updateSkipTimes();
+videoElement.currentTime = Number(localStorage.getItem(document.title)) || 0;
+updateSkipTimes(currentEpisode);
 addSkipFunctionality(episodesArray.length);
 
 // used to change episodes
