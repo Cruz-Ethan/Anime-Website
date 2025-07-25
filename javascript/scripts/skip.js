@@ -1,5 +1,5 @@
 import getAnime from "./anime-finder.js";
-import { currentEpisode, setEpisode } from "./episodes.js";
+import { currentEpisode, setEpisode } from "./episode-renderer.js";
 
 let openingStartTime, openingEndTime, endingStartTime, endingEndTime;
 const skipIntroButtonElement = document.querySelector('.skip-intro-button');
@@ -20,12 +20,11 @@ export function addSkipFunctionality(numberOfEpisodes) {
     skipOutroButtonElement.addEventListener('click', skipOutro);
 
     videoElement.addEventListener('ended', () => {
-        const episodeName = document.title;
+        videoElement.currentTime = 0;
         if(currentEpisode < numberOfEpisodes) {
             setEpisode(currentEpisode + 1);
             videoElement.currentTime = 0;
         }
-        localStorage.setItem(episodeName, 0);
     });
 };
 

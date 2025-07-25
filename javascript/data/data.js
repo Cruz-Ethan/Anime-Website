@@ -22,7 +22,7 @@ export const seasons = [
                 1330.22
             ]
         },
-        id: 0
+        id: 'J87Nvv-sLikGg-FBqGsr'
     },
     {
         title: "Scooped up by an S-Rank Adventurer!",
@@ -45,7 +45,7 @@ export const seasons = [
                 1330.65
             ]
         },
-        id: 1
+        id: 'Q9PVjx-kcwlDN-i47sli'
     },
     {
         title: "Betrothed to my Sister's Ex",
@@ -68,7 +68,7 @@ export const seasons = [
                 1347.41
             ]
         },
-        id: 2
+        id: '6RDjL8-71NubM-S1wifW'
     },
     {
         title: "Secrets of the Silent Witch",
@@ -91,7 +91,7 @@ export const seasons = [
                 1345.29
             ]
         },
-        id: 3
+        id: 'Azm6Qz-iea6sw-mdDENa'
     },
     {
         title: "The Water Magician",
@@ -114,7 +114,7 @@ export const seasons = [
                 1365.11
             ]
         },
-        id: 4
+        id: 'CzJqIF-t5LuZ0-z1OAFF'
     },
     {
         title: "Welcome to the Ouctast's Restaurant!",
@@ -137,7 +137,7 @@ export const seasons = [
                 1314.22
             ]
         },
-        id: 5
+        id: 'jtHkzH-zLdgR9-LLazQS'
     },
     {
         title: "Dealing with Mikadono Sisters is a Breeze",
@@ -160,7 +160,7 @@ export const seasons = [
                 1330.35
             ]
         },
-        id: 6
+        id: 'OXhHlH-oFHvEs-XQZXE6'
     },
     {
         title: "Reborn as a Vending Machine, I Now Wander the Dungeon Season 2",
@@ -183,7 +183,7 @@ export const seasons = [
                 1325.29
             ]
         },
-        id: 7
+        id: 'Pk28Ro-PULb6X-f48EZJ'
     },
     {
         title: "Our Last Crusade or the Rise of a New World Season 2",
@@ -224,7 +224,7 @@ export const seasons = [
                 1410.51
             ]
         },
-        id: 8
+        id: 'OSsWiz-rWl8Ry-4k9IEL'
     },
     {
         title: "The Children of the Shiunji Family",
@@ -265,8 +265,28 @@ export const seasons = [
                 1330.30
             ]
         },
-        id: 9
+        id: 'Vq3eIW-ckQgCa-SxsTNa'
     }
 ];
+
+export let watchLaterList = JSON.parse(localStorage.getItem('watch later')) || [];
+
+export function addToWatchLater(animeId) {
+    watchLaterList.push(seasons.find(season => season.id === animeId));
+    saveToStorage();
+}
+
+export function removeFromWatchLater(animeId) {
+    watchLaterList = watchLaterList.filter(anime => anime.id !== animeId);
+    saveToStorage();
+}
+
+export function inWatchLater(animeId) {
+    return watchLaterList.some(anime => anime.id === animeId);
+}
+
+function saveToStorage() {
+    localStorage.setItem('watch later', JSON.stringify(watchLaterList));
+}
 
 export default seasons;

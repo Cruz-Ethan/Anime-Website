@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
 
-        <link rel="stylesheet" href="../../../styles/episode.css">
-        <link rel="stylesheet" href="../../../styles/general.css">
-        <link rel="stylesheet" href="../../../styles/header.css">
-        <link rel="icon" type="image/x-icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="styles/episode.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
 
         <script src="https://kit.fontawesome.com/25180c9a39.js" crossorigin="anonymous"></script>
-        <script type="module" src="../../../javascript/scripts/episodes.js" defer></script>
-        <script src="../../../javascript/scripts/header.js" defer></script>
-        <script src="../../../javascript/scripts/search bar/search-bar-episodes.js" defer></script>
+        <script type="module" src="javascript/scripts/episodes.js" defer></script>
+        <script src="javascript/scripts/header.js" defer></script>
+        <script type="module" src="javascript/scripts/search bar/search-bar-episodes.js" defer></script>
+        <script src="javascript/scripts/light-mode.js" defer></script>
     </head>
     <body>
         <header>
             <i class="fa-solid fa-bars fa-2x hamburger-menu"></i>
-            <h1 class="logo"><a href="../../../index.html">SubAnime</a></h1>
+            <h1 class="logo"><a href="index.html">SubAnime</a></h1>
             <div class="search-bar-container">
                 <input type="text" placeholder="Search for an anime" class="search-bar">
                 <i class="fa-solid fa-magnifying-glass fa-2x search-icon"></i>
@@ -27,8 +28,10 @@
         <nav>
             <button class="close-icon-container"><i class="fa-solid fa-xmark fa-2x close-icon"></i></button>
             <ul>
-                <li><a class="home-link" href="../../../index.html">Home</a></li>
-                <li><a class="currently-watching-link" href="../../../currently-watching.html">Currently Watching</a></li>
+                <li><a class="home-link" href="index.html">Home</a></li>
+                <li><a class="continue-watching-link" href="continue-watching.html">Continue Watching</a></li>
+                <li><a class="continue-watching-link" href="watch-later.html">Watch Later</a></li>
+                <li><button class="switch-modes-button">Light Mode</button></li>
             </ul>
         </nav>
         <div class="overlay"></div>
@@ -42,7 +45,7 @@
         </main>
         <aside>
             <div class="title-container">
-                <img class="title-cover" src="title-cover.jpg">
+                <img class="title-cover">
                 <div class="titles">
                     <h2 class="title"></h2>
                     <h3 class="alternative-titles"></h3>

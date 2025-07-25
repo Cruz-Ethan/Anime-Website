@@ -1,19 +1,53 @@
+@supports(oklch(0%, 0, 0)) {
+    :root {
+        --bg-dark: oklch(0%, 0, 0);
+        --bg-normal: oklch(5%, 0, 0);
+        --bg-light: oklch(10%, 0.01, 150);
+        --bg-glow: oklch(15%, 0.01, 150);
+
+        --text-muted: oklch(70%, 0, 0);
+        --text-normal: oklch(95%, 0, 0);
+        
+        --highlight: oklch(78.726% 0.14352 176.519);
+    }
+
+    .light-mode {
+        --bg-glow: oklch(100%, 0, 0);
+        --bg-light: oklch(95%, 0, 0);
+        --bg-normal: oklch(90%, 0.01, 150);
+        --bg-dark: oklch(85%, 0.01, 150);
+
+        --text-muted: oklch(30%, 0, 0);
+        --text-normal: oklch(5%, 0, 0);
+    }
+}
+
 :root {
     --bg-dark: hsl(0, 0%, 0%);
-    --bg-normal: hsl(0, 0%, 5%);
-    --bg-light: hsl(150, 3%, 10%);
-    --bg-glow: hsl(150, 3%, 15%);
+    --bg-normal: hsl(0, 0%, 10%);
+    --bg-light: hsl(170, 3%, 15%);
+    --bg-glow: hsl(170, 3%, 15%);
 
     --text-muted: hsl(0, 0%, 70%);
     --text-normal: hsl(0, 0%, 95%);
-    
-    --highlight: hsl(150, 75%, 45%);
+
+    --highlight: hsl(170, 79%, 47%);
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 16px;
+}
+
+.light-mode {
+    --bg-glow: hsl(170, 3%, 92%);
+    --bg-light: hsl(0, 0%, 95%);
+    --bg-normal: hsl(0, 0%, 100%);
+    --bg-dark: hsl(170, 3%, 90%);
+
+    --text-muted: hsl(0, 0%, 18%);
+    --text-normal: hsl(0, 0%, 0%);
 }
 
 body {

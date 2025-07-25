@@ -1,11 +1,8 @@
 import {updateSkipTimes, addSkipFunctionality} from './skip.js';
-import getAnime from './anime-finder.js';
-
-// load the anime data
-const anime = getAnime();
+import { currentEpisode, anime, setEpisode, saveEpisodeTime } from './episode-renderer.js';
 
 // render HTML data
-export let currentEpisode = Number(localStorage.getItem(anime.title)) || 1;
+document.querySelector('.title-cover').src = `shows/${anime.path}/title-cover.jpg`;
 document.title = `${anime.title}: Episode ${currentEpisode}`;
 document.querySelector('.title').innerHTML = anime.title;
 document.querySelector('.alternative-titles').innerHTML = anime.alternativeTitles;
@@ -15,7 +12,7 @@ document.querySelector('.episode-list-container').innerHTML = anime.opening.star
 }, '');
 
 // load episodes list
-const episodesArray = document.querySelectorAll('.episode-button');
+export const episodesArray = document.querySelectorAll('.episode-button');
 episodesArray[currentEpisode - 1].classList.toggle('selected-episode');
 episodesArray.forEach((episodeButtonElement, index) => {
     episodeButtonElement.addEventListener('click', () => {
@@ -24,28 +21,13 @@ episodesArray.forEach((episodeButtonElement, index) => {
 });
 
 // load video
-const videoElement = document.querySelector('.episode');
-videoElement.src = `episodes/episode-${currentEpisode}.mp4`;
-videoElement.currentTime = Number(localStorage.getItem(document.title)) || 0;
+export const videoElement = document.querySelector('.episode');
+videoElement.src = `shows/${anime.path}/episodes/episode-${currentEpisode}.mp4`;
+videoElement.currentTime = Number(localStorage.getItem(anime.id + currentEpisode)) || 0;
 updateSkipTimes(currentEpisode);
 addSkipFunctionality(episodesArray.length);
 
-// used to change episodes
-export function setEpisode(episodeIndex) {
-    // remove and save current data
-    episodesArray[currentEpisode - 1].classList.remove('selected-episode');
-    localStorage.setItem(document.title, String(videoElement.currentTime));
-
-    // update current episode
-    currentEpisode = episodeIndex;
-
-    // render HTML data
-    videoElement.src = `episodes/episode-${episodeIndex}.mp4`;
-    document.title = `${anime.title}: Episode ${currentEpisode}`;
-    episodesArray[currentEpisode - 1].classList.add('selected-episode');
-
-    // load old data, save new data, update skip button appearances
-    videoElement.currentTime = Number(localStorage.getItem(document.title)) || 0;
-    localStorage.setItem(anime.title, currentEpisode);
-    updateSkipTimes(currentEpisode);
-}
+// header stuff
+document.querySelector('.logo').addEventListener('click', saveEpisodeTime);
+document.querySelector('.home-link').addEventListener('click', saveEpisodeTime);
+document.querySelector('.continue-watching-link').addEventListener('click', saveEpisodeTime);
