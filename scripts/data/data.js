@@ -35,7 +35,8 @@ export const seasons = [
             startTimes: [
                 7.07,
                 80.27,
-                0
+                0,
+                93.22
             ]
         },
         ending: {
@@ -43,7 +44,8 @@ export const seasons = [
             startTimes: [
                 1330.65,
                 1330.65,
-                1330.65
+                1330.65,
+                1290.32
             ]
         },
         id: 'Q9PVjx-kcwlDN-i47sli'
@@ -58,7 +60,8 @@ export const seasons = [
             startTimes: [
                 49.60,
                 73.42,
-                77.28
+                77.28,
+                31.32
             ]
         },
         ending: {
@@ -66,7 +69,8 @@ export const seasons = [
             startTimes: [
                 1347.29,
                 1347.27,
-                1347.41
+                1347.41,
+                1347.08
             ]
         },
         id: '6RDjL8-71NubM-S1wifW'
@@ -81,7 +85,8 @@ export const seasons = [
             startTimes: [
                 1345.35,
                 41.29,
-                33.29
+                33.29,
+                8.26
             ]
         },
         ending: {
@@ -89,7 +94,8 @@ export const seasons = [
             startTimes: [
                 10000,
                 1345.32,
-                1345.29
+                1345.29,
+                1345.27
             ]
         },
         id: 'Azm6Qz-iea6sw-mdDENa'
@@ -104,7 +110,8 @@ export const seasons = [
             startTimes: [
                 74.28,
                 28.17,
-                96.23
+                96.23,
+                0
             ]
         },
         ending: {
@@ -112,7 +119,8 @@ export const seasons = [
             startTimes: [
                 1357.33,
                 1365.37,
-                1365.11
+                1365.11,
+                1364.37
             ]
         },
         id: 'CzJqIF-t5LuZ0-z1OAFF'
@@ -127,7 +135,8 @@ export const seasons = [
             startTimes: [
                 86.55,
                 148.68,
-                98.26
+                98.26,
+                22.34
             ]
         },
         ending: {
@@ -135,7 +144,8 @@ export const seasons = [
             startTimes: [
                 1315.01,
                 1314.77,
-                1314.22
+                1314.22,
+                1314.35
             ]
         },
         id: 'jtHkzH-zLdgR9-LLazQS'
@@ -150,7 +160,8 @@ export const seasons = [
             startTimes: [
                 1330.31,
                 97.26,
-                46.00
+                46.00,
+                132.26
             ]
         },
         ending: {
@@ -158,7 +169,8 @@ export const seasons = [
             startTimes: [
                 10000,
                 1330.28,
-                1330.35
+                1330.35,
+                1305.36
             ]
         },
         id: 'OXhHlH-oFHvEs-XQZXE6'
@@ -173,12 +185,14 @@ export const seasons = [
             startTimes: [
                 37.37,
                 37.30,
-                79.33
+                79.33,
+                80.32
             ]
         },
         ending: {
             lengthSeconds: 89.83,
             startTimes: [
+                1325.29,
                 1325.29,
                 1325.29,
                 1325.29
