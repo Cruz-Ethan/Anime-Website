@@ -98,8 +98,8 @@ main {
 .skip-outro-button {
     outline: transparent;
     background-color: transparent;
-    color: var(--text-normal);
-    border: 3px solid var(--text-normal);
+    color: hsl(0, 0%, 95%);
+    border: 3px solid hsl(0, 0%, 95%);
     font-size: 18px;
     font-weight: bold;
     padding: 10px 16px;

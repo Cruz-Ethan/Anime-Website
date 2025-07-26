@@ -1,7 +1,14 @@
 const switchModesButton = document.querySelector('.switch-modes-button');
-switchModesButton.addEventListener('click', switchModes);
-loadMode();
 
+// adds button functionality and loads mode from storage
+export function addLightModeFunctionality() {
+    switchModesButton.addEventListener('click', switchModes);
+    loadMode();
+};
+
+export default addLightModeFunctionality;
+
+// toogles light mode
 function switchModes() {
     document.body.classList.toggle('light-mode');
     if(localStorage.getItem('mode')) {
@@ -14,6 +21,7 @@ function switchModes() {
     }
 }
 
+// load from local storage
 function loadMode() {
     if(localStorage.getItem('mode')) {
         document.body.classList.add('light-mode');

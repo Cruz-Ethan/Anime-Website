@@ -1,5 +1,4 @@
-import seasons from '../data/data.js'
-import { inWatchLater } from '../data/data.js';
+import { inWatchLater, seasons } from '../data/data.js';
 
 function shortenDescription(description) {
     return description.length > 75 ? description.substring(0, 75) + '...' : description;

@@ -1,3 +1,4 @@
+// list of all anime
 export const seasons = [
     {
         title: "Private Tutor to the Duke's Daughter",
@@ -269,7 +270,10 @@ export const seasons = [
     }
 ];
 
-export let watchLaterList = JSON.parse(localStorage.getItem('watch later')) || [];
+export default seasons;
+
+// list of anime to watch later
+export const watchLaterList = JSON.parse(localStorage.getItem('watch later')) || [];
 
 export function addToWatchLater(animeId) {
     watchLaterList.push(seasons.find(season => season.id === animeId));
@@ -277,7 +281,9 @@ export function addToWatchLater(animeId) {
 }
 
 export function removeFromWatchLater(animeId) {
-    watchLaterList = watchLaterList.filter(anime => anime.id !== animeId);
+    const anime = watchLaterList.find(anime => anime.id === animeId);
+    const indexToRemove = watchLaterList.indexOf(anime);
+    watchLaterList.splice(indexToRemove, 1);
     saveToStorage();
 }
 
@@ -288,5 +294,3 @@ export function inWatchLater(animeId) {
 function saveToStorage() {
     localStorage.setItem('watch later', JSON.stringify(watchLaterList));
 }
-
-export default seasons;

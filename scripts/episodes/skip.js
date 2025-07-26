@@ -1,34 +1,31 @@
-import getAnime from "./anime-finder.js";
-import { currentEpisode, setEpisode } from "./episode-renderer.js";
+import { currentEpisode, changeURL, anime, videoElement } from "./episode-renderer.js";
 
 let openingStartTime, openingEndTime, endingStartTime, endingEndTime;
 const skipIntroButtonElement = document.querySelector('.skip-intro-button');
 const skipOutroButtonElement = document.querySelector('.skip-outro-button');
-const videoElement = document.querySelector('.episode');
-const anime = getAnime();
 
-export function updateSkipTimes() {
-    videoElement.removeEventListener('timeupdate', displayIntroButton);
-    videoElement.removeEventListener('timeupdate', displayOutroButton);
-    assignNewTimes(currentEpisode);
+// adds functionality to skip intro and skip outro buttons
+export function addSkipSongFunctionality() {
+    assignSkipTimes(currentEpisode);
     videoElement.addEventListener('timeupdate', displayIntroButton);
     videoElement.addEventListener('timeupdate', displayOutroButton);
-};
-
-export function addSkipFunctionality(numberOfEpisodes) {
     skipIntroButtonElement.addEventListener('click', skipIntro);
     skipOutroButtonElement.addEventListener('click', skipOutro);
+};
 
+// plays next episode (if exists) when current episode ends
+export function addSkipEpisodeFunctionality() {
     videoElement.addEventListener('ended', () => {
         videoElement.currentTime = 0;
-        if(currentEpisode < numberOfEpisodes) {
-            setEpisode(currentEpisode + 1);
-            videoElement.currentTime = 0;
+        if(currentEpisode < anime.opening.startTimes.length) {
+            localStorage.setItem(anime.id + (currentEpisode + 1), 0);
+            changeURL(currentEpisode + 1);
         }
     });
 };
 
-function assignNewTimes(currentEpisode) {
+// get skip times
+function assignSkipTimes(currentEpisode) {
     openingStartTime = anime.opening.startTimes[currentEpisode - 1];
     openingEndTime = openingStartTime + anime.opening.lengthSeconds;
 
@@ -36,6 +33,7 @@ function assignNewTimes(currentEpisode) {
     endingEndTime = endingStartTime + anime.ending.lengthSeconds;
 }
 
+// display and hide buttons when necessary
 function displayIntroButton() {
     let currentTime = videoElement.currentTime;
     if(currentTime > openingStartTime && currentTime < openingEndTime - 1) {
