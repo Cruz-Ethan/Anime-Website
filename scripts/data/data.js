@@ -281,6 +281,47 @@ export const seasons = [
             ]
         },
         id: 'Vq3eIW-ckQgCa-SxsTNa'
+    },
+    {
+        title: "I'm the Evil Lord of an Intergalactic Empire!",
+        alternativeTitles: "I'm the Evil Lord of an Intergalactic Empire!, Ore wa Seikan Kokka no Akutoku Ryoushu!, I'm the Evil Lord of an Intergalactic Empire!, I am the Villainous Lord of the Interstellar Nation, OreAku, 俺は星間国家の悪徳領主！",
+        description: "In his last life, Liam lived as a moral, responsible person...but died deep in debt and betrayed by his wife. Reborn into the ruling family of a vast interstellar empire, Liam knows that life is divided between the downtrodden and the ones who do the stomping, so this time he's going to take what he wants and live for himself. But somehow, things refuse to work out that way. Despite doing his best to become a tyrant, Liam's decisions lead to nothing but peace and prosperity for the empire under his rule, and he just gets more and more popular!",
+        path: "i'm the evil lord of an intergalactic empire/season 1",
+        opening: {
+            lengthSeconds: 90.03,
+            startTimes: [
+                1309.26,
+                10000,
+                43.31,
+                42.35,
+                40.33,
+                67.16,
+                138.30,
+                79.35,
+                171.32,
+                101.32,
+                64.32,
+                84.35
+            ]
+        },
+        ending: {
+            lengthSeconds: 89.99,
+            startTimes: [
+                10000,
+                1325.26,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1325.36,
+                1328.47
+            ]
+        },
+        id: '2Jslk4-f9H62a-sjKK3f'
     }
 ];
 
