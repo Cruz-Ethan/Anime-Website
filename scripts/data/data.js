@@ -322,6 +322,47 @@ export const seasons = [
             ]
         },
         id: '2Jslk4-f9H62a-sjKK3f'
+    },
+    {
+        title: "I've Been Killing Slimes for 300 years and Maxed Out My Level Season 2",
+        alternativeTitles: "I've Been Killing Slimes for 300 Years and Maxed Out My Level Season 2, Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita: Sono Ni, Slime Taoshite 300-nen, Shiranai Uchi ni Level Max ni Nattemashita 2nd Season, スライム倒して300年、知らないうちにレベルMAXになってました ～そのに～",
+        description: "Azusa Aizawa, a 27 years old woman, died on work site due to overworking. She has the possibility to reincarnate, and so she plans to live a chilling and calm life. But will she be able to be relaxed?",
+        path: "i've been killing slimes for 300 years and maxed out my level/season 2",
+        opening: {
+            lengthSeconds: 89.98,
+            startTimes: [
+                1300.26,
+                40.26,
+                138.30,
+                126.30,
+                126.06,
+                95.29,
+                85.24,
+                84.25,
+                82.27,
+                30.30,
+                55.32,
+                48.32
+            ]
+        },
+        ending: {
+            lengthSeconds: 89.79,
+            startTimes: [
+                10000,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                1300.28,
+                10000
+            ]
+        },
+        id: '0rYrgJ-gye08g-TY4F3k'
     }
 ];
 
